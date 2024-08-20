@@ -25,7 +25,8 @@ export default function ADMEpassPost() {
   useEffect(() => {
     fetch(`${import.meta.env.VITE_APP_URI_API}/api/ADMEpass/`).then((result) => {
       result.json().then((resp) => {
-        setADME(resp);
+         const sortedData = resp.sort((a, b) => a.sn - b.sn);
+                 setADME(sortedData);
       });
     });
   }, []);
