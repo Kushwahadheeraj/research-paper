@@ -25,7 +25,8 @@ export default function RagiPost() {
     useEffect(() => {
         fetch(`${import.meta.env.VITE_APP_URI_API}/api/ragi/`).then((result) => {
             result.json().then((resp) => {
-                setRagi(resp);
+                const sortedData = resp.sort((a, b) => a.sn - b.sn);
+                 setRagi(sortedData);
             });
         });
     }, []);
