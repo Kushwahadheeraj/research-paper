@@ -49,16 +49,21 @@ export default function StatisticsPost() {
                 <table className="table-fixed border-collapse border border-slate-400">
                   <thead className="bg-gray-50">
                     <tr>
-                      
+                       <th
+                        scope="col"
+                        className="py-3.5 border-collapse border border-slate-400 pi-6 pr-10 text-left text-sm font-semibold text-gray-900"
+                      >
+                        S.No.
+                      </th>
                       <th
                         scope="col"
-                        className="py-3.5 w-1/5 border-collapse border border-slate-400 pi-6 pr-10 text-left text-sm font-semibold text-gray-900"
+                        className="py-3.5 w-1/2 border-collapse border border-slate-400 pi-6 pr-10 text-left text-sm font-semibold text-gray-900"
                       >
                         Statistics Name
                       </th>
                       <th
                         scope="col"
-                        className="py-3.5 w-1/5 border-collapse border border-slate-400 pi-6 pr-10 text-left text-sm font-semibold text-gray-900"
+                        className="py-3.5 w-1/2 border-collapse border border-slate-400 pi-6 pr-10 text-left text-sm font-semibold text-gray-900"
                       >
                         Total Metabolites
                       </th>
@@ -68,7 +73,9 @@ export default function StatisticsPost() {
                   <tbody className="bg-white divide-y divide-gray-200">
                     {records.map((statistic, i) => (
                       <tr key={i}>
-                        
+                         <td className="py-4 pl-4 pr-3 border-collapse border border-slate-300 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-1">
+                          {statistic.sn}
+                        </td>
                         <td className="py-4 pl-4 pr-3 border-collapse border border-slate-300 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-1">
                           {statistic.statisticsName}
                         </td>
