@@ -25,7 +25,9 @@ export default function BarleyPost() {
     useEffect(() => {
         fetch(`${import.meta.env.VITE_APP_URI_API}/api/barley/`).then((result) => {
             result.json().then((resp) => {
-                setBarley(resp);
+                 const sortedData = resp.sort((a, b) => a.sn - b.sn);
+                 setBarley(sortedData);
+                
             });
         });
     }, []);
