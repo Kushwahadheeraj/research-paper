@@ -25,7 +25,9 @@ export default function StatisticsPost() {
   useEffect(() => {
     fetch(`${import.meta.env.VITE_APP_URI_API}/api/statistics/`).then((result) => {
       result.json().then((resp) => {
-        setStatistics(resp);
+         const sortedData = resp.sort((a, b) => a.sn - b.sn);
+                 setStatistics(sortedData);
+        
       });
     });
   }, []);
