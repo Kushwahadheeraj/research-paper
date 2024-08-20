@@ -25,7 +25,9 @@ export default function BajraPost() {
     useEffect(() => {
         fetch(`${import.meta.env.VITE_APP_URI_API}/api/bajras/`).then((result) => {
             result.json().then((resp) => {
-                setBajra(resp);
+                 const sortedData = resp.sort((a, b) => a.sn - b.sn);
+                 setBajra(sortedData);
+                
             });
         });
     }, []);
