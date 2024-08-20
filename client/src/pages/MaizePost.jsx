@@ -25,7 +25,9 @@ export default function MaizePost() {
     useEffect(() => {
         fetch(`${import.meta.env.VITE_APP_URI_API}/api/maize/`).then((result) => {
             result.json().then((resp) => {
-                setMaize(resp);
+                 const sortedData = resp.sort((a, b) => a.sn - b.sn);
+                 setMaize(sortedData);
+                
             });
         });
     }, []);
