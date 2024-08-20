@@ -108,7 +108,12 @@ export default function BajraPost() {
                                 <table className="table-fixed border-collapse border border-slate-400">
                                     <thead className="bg-gray-50">
                                         <tr>
-                                            
+                                             <th
+                                                scope="col"
+                                                className="py-3.5 border-collapse border border-slate-400 pi-6 pr-10 text-left text-sm font-semibold text-gray-900"
+                                            >
+                                                S.No
+                                            </th>
                                             <th
                                                 scope="col"
                                                 className="py-3.5 border-collapse border border-slate-400 pi-6 pr-3 text-left text-sm font-semibold text-gray-900"
@@ -180,7 +185,9 @@ export default function BajraPost() {
                                     <tbody className="bg-white divide-y divide-gray-200">
                                         {records.map((bajra, i) => (
                                             <tr key={i}>
-                                               
+                                                <td className=" py-4 pl-4 pr-3  border-collapse  border border-slate-300 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-1">
+                                                    {bajra.sn}
+                                                </td>
                                                 <td className="py-4 pl-4 pr-3 italic border-collapse border border-slate-300 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-1">
                                                     {bajra.name}
                                                 </td>
