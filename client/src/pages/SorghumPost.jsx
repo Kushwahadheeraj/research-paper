@@ -26,7 +26,9 @@ export default function SorghumPost() {
     useEffect(() => {
         fetch(`${import.meta.env.VITE_APP_URI_API}/api/sorghum/`).then((result) => {
             result.json().then((resp) => {
-                setSorghum(resp);
+                 const sortedData = resp.sort((a, b) => a.sn - b.sn);
+                 setSorghum(sortedData);
+                
             });
         });
     }, []);
