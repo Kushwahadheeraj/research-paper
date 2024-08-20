@@ -26,7 +26,8 @@ export default function WheatPost() {
   useEffect(() => {
     fetch(`${import.meta.env.VITE_APP_URI_API}/api/wheat/`).then((result) => {
       result.json().then((resp) => {
-        setWheat(resp);
+         const sortedData = resp.sort((a, b) => a.sn - b.sn);
+                 setWheat(sortedData);
       });
     });
   }, []);
