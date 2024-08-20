@@ -25,7 +25,8 @@ export default function RicePost() {
     useEffect(() => {
         fetch(`${import.meta.env.VITE_APP_URI_API}/api/rice/`).then((result) => {
             result.json().then((resp) => {
-                setRice(resp);
+                const sortedData = resp.sort((a, b) => a.sn - b.sn);
+                 setRice(sortedData);
             });
         });
     }, []);
