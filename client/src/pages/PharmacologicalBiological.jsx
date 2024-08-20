@@ -24,7 +24,9 @@ export default function PharmacologicalBiological() {
     useEffect(() => {
         fetch(`${import.meta.env.VITE_APP_URI_API}/api/pharmacologyBiological/`).then((result) => {
             result.json().then((resp) => {
-                setPharmacologicalBiological(resp);
+                const sortedData = resp.sort((a, b) => a.sn - b.sn);
+                 setPharmacologicalBiological(sortedData);
+            
             });
         });
     }, []);
@@ -38,12 +40,12 @@ export default function PharmacologicalBiological() {
                                 <table className="table-fixed border-collapse border border-slate-400">
                                     <thead className="bg-gray-50">
                                         <tr>
-                                            {/* <th
+                                            <th
                                                 scope="col"
                                                 className="py-3.5 border-collapse border border-slate-400 pi-6 pr-10 text-left text-sm font-semibold text-gray-900"
                                             >
                                                 S.No
-                                            </th> */}
+                                            </th>
                                             <th
                                                 scope="col"
                                                 className="py-3.5 border-collapse border border-slate-400 pi-6 pr-3 text-left text-sm font-semibold text-gray-900"
@@ -68,9 +70,9 @@ export default function PharmacologicalBiological() {
                                     <tbody className="bg-white divide-y divide-gray-200">
                                         {records.map((pharmacologicalBiological, i) => (
                                             <tr key={i}>
-                                                {/* <td className=" py-4 pl-4 pr-3 border-collapse border border-slate-300 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-1">
+                                                <td className=" py-4 pl-4 pr-3 border-collapse border border-slate-300 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-1">
                                                     {pharmacologicalBiological.sn}
-                                                </td> */}
+                                                </td>
                                                 <td className="py-4 pl-4 pr-3 border-collapse border border-slate-300 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-1">
                                                     {pharmacologicalBiological.cid}
                                                 </td>
