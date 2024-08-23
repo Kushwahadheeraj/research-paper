@@ -20,7 +20,7 @@ export default function PharmacologicalPost() {
 
 
       <div className=" mt-10 text-center">
-        <h1 className="text-4xl font-bold ">Dominant biological activities of phytometabolites in different Cereals</h1>
+        <h1 className="text-4xl font-bold ">Dominant biological activities of phytometabolites in different cereals</h1>
       </div>
       <PharmacologicalCereal />
 
