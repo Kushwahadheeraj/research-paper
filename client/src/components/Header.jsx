@@ -56,24 +56,7 @@ export default function Header() {
             <div className="menu-bar-1 hidden bg-gray-100">
               <ul>
 
-                <li><Link to="/adme">
-                  <span className="relative inline-flex items-center rounded px-2.5 py-1.5 font-medium">
-                    <span className="ml-1.5 text-base text-gray-600 hover:text-gray-900">
-                      ADME
-                    </span>
-                  </span></Link></li>
-                <li><Link to="/statisties">
-                  <span className="relative inline-flex items-center rounded px-2.5 py-1.5 font-medium">
-                    <span className="ml-1.5 text-base text-gray-600 hover:text-gray-900">
-                      Statistics
-                    </span>
-                  </span></Link></li>
-                <li><Link to="/CMdb/pharmcological ">
-                  <span className="relative inline-flex items-center rounded px-2.5 py-1.5 font-medium">
-                    <span className="ml-1.5 text-base text-gray-600 hover:text-gray-900">
-                      Pharmacological Activities
-                    </span>
-                  </span></Link></li>
+                
                 <li className="hover-me">
 
                   <Link><span className="relative inline-flex items-center rounded px-2.5 py-1.5 font-medium">
@@ -141,6 +124,24 @@ export default function Header() {
                   </div>
 
                 </li>
+                <li><Link to="/adme">
+                  <span className="relative inline-flex items-center rounded px-2.5 py-1.5 font-medium">
+                    <span className="ml-1.5 text-base text-gray-600 hover:text-gray-900">
+                      ADME
+                    </span>
+                  </span></Link></li>
+                <li><Link to="/statisties">
+                  <span className="relative inline-flex items-center rounded px-2.5 py-1.5 font-medium">
+                    <span className="ml-1.5 text-base text-gray-600 hover:text-gray-900">
+                      Statistics
+                    </span>
+                  </span></Link></li>
+                <li><Link to="/CMdb/pharmcological ">
+                  <span className="relative inline-flex items-center rounded px-2.5 py-1.5 font-medium">
+                    <span className="ml-1.5 text-base text-gray-600 hover:text-gray-900">
+                      Pharmacological Activities
+                    </span>
+                  </span></Link></li>
                 <li><Link to="/CMdb/author">
                   <span className="relative inline-flex items-center rounded px-2.5 py-1.5 font-medium">
                     <span className="ml-1.5 text-base text-gray-600 hover:text-gray-900">
